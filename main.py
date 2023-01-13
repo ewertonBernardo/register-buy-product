@@ -1,3 +1,5 @@
+import os
+
 def home_screen():
   print("=========================================")
   print("---------------WELCOME!------------------")
@@ -19,6 +21,8 @@ def screen_buy():
   print("Inform the name and amount of product separated by comma:")
   name_amount = input("> ")
   return name_amount
+  
+  
 def screen_itens():
   with open("data.txt", 'r') as data:
    dt = data.read()
@@ -37,6 +41,9 @@ def screen_itens():
   return dt2
 
 
+def screen_clear():
+  os.system('cls' if os.name == 'nt' else 'clear')
+  
 
 def register_product(product):
   with open("data.txt", 'a') as data:
@@ -67,7 +74,7 @@ while True:
       if(more == 's'):
         register_product(screen_register())
       elif (more == 'n'):
-        #insert clear
+        screen_clear()#insert clear
         break
   
   elif (option == '2'):
@@ -80,7 +87,7 @@ while True:
       if(more == 's'):
         itens.append(tuple(screen_buy().split(',')))
       elif (more == 'n'):
-        #insert clear
+        screen_clear()#insert clear
         print(itens)
         print(buy(products, itens))
         break
