@@ -1,0 +1,9 @@
+Banana, 5.00
+Apple, 4.5
+Kiwi, 12.6
+Pera, 6.27
+Grapefruit, 8.4
+Watermelon, 7.3
+Papaya, 6.7
+Tangirine, 4.2
+Orange, 3.6
